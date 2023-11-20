@@ -28,3 +28,12 @@ let dogHumanRatio = 7  ;
 let myDogAge = myAge * dogHumanRatio
 
 console.log(myDogAge);
+
+// create a variable bonusPoint and increase and decrease by 100 25 78;
+
+let bonusPoint = 50;
+ bonusPoint = bonusPoint + 100;
+ bonusPoint = bonusPoint - 25;
+ bonusPoint = bonusPoint - 78;
+ console.log(bonusPoint);
+
