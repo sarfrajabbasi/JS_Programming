@@ -43,10 +43,15 @@ let bonusPoint = 50;
 
 // onclick event listener
 
+// increment count
 function increment(){
-    count++
-document.getElementById('count-el').textContent = count
+let countEl = document.getElementById('count-el')
+count++
+countEl.textContent = count
+
 }
+
+
 
 let race = 5;
 function setRace(){
