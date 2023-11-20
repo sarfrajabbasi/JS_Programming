@@ -24,16 +24,45 @@ console.log(count2);
 // dogAge:---
 
 let myAge = 23 ; 
-let dogHumanRatio = 7  ;
+let dogHumanRatio = 7;
 let myDogAge = myAge * dogHumanRatio
 
 console.log(myDogAge);
 
-// create a variable bonusPoint and increase and decrease by 100 25 78;
+// Create a variable bonusPoint and increase and decrease by 100 25 78;
+
+// Reassigning & increment
 
 let bonusPoint = 50;
- bonusPoint = bonusPoint + 100;
- bonusPoint = bonusPoint - 25;
- bonusPoint = bonusPoint - 78;
+ bonusPoint = bonusPoint + 50;
+ bonusPoint = bonusPoint + 45;
+ bonusPoint = bonusPoint - 75;
  console.log(bonusPoint);
 
+ const arr = []
+
+// onclick event listener
+
+function increment(){
+    count++
+document.getElementById('count-el').textContent = count
+}
+
+let race = 5;
+function setRace(){
+    let raceElement = document.getElementById('race')
+    const time = setInterval(function(){
+        if(race !== 0){
+            raceElement.textContent =race
+            raceElement.style.color = 'red' 
+            console.log(race--);
+        }else{
+            console.log("GO!!!");
+            raceElement.textContent = "GO!!!"
+            raceElement.style.color = 'green' 
+            clearInterval(time)
+        }
+          
+    },1000)
+   
+}
