@@ -2,4 +2,29 @@
 
 // "The only way to learn to code is to write a lot of code"
 
-document.getElementById('count-el').innerText = 5;
+// create variable(store the count) for data store
+
+// let count be 0
+let count = 0;
+
+// mainly for debugging process for checking our code
+console.log(count);
+
+// mathametical operations
+
+let firstBatch = 5;
+let secondBatch = 7;
+
+let sum = 10 + 30;
+let count2 = firstBatch + secondBatch;
+
+console.log(sum);
+console.log(count2);
+
+// dogAge:---
+
+let myAge = 23 ; 
+let dogHumanRatio = 7  ;
+let myDogAge = myAge * dogHumanRatio
+
+console.log(myDogAge);
