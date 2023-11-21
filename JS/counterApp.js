@@ -51,7 +51,9 @@ countEl.textContent = count
 
 }
 
-
+function save(){
+    console.log(count);
+}
 
 let race = 5;
 function setRace(){
