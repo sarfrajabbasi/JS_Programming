@@ -76,4 +76,36 @@ console.log(myGreeting);
 
 let welcomeEl = document.getElementById("welcome-el");
 
-welcomeEl.innerText = `${greeting2} ${Myname} 👋`
+welcomeEl.innerText = `${greeting2} ${Myname} 👋`;
+
+// create two variables and concatenate the two var into third var called fullname
+let firstName = "tony";
+let lastName = "billbard";
+let fullName = firstName + lastName;
+//  and log
+
+console.log(fullName);
+
+// concatinate two string in a functions
+
+function greetingMe(name, greeting) {
+  return greeting + " " + name + " ! ";
+}
+
+console.log(greetingMe());
+
+// incrementing and decrementing
+
+let myPoints = 3
+function add3Points(){
+   myPoints += 3
+   console.log(myPoints);
+  }
+  
+  function remove1Points(){
+    myPoints--
+    console.log(myPoints);
+}
+
+add3Points()
+remove1Points()
