@@ -1,13 +1,17 @@
+// element
+let countEl = document.getElementById("count-el");
+let saveEl = document.getElementById("saveEl");
+
 // onclick event listener
 
 // increment count
-function increment(){
-    let countEl = document.getElementById('count-el')
-    count++
-    countEl.textContent = count
-    
-    }
-    
-    function save(){
-        console.log(count);
-    }
+function increment() {
+  count++;
+  countEl.innerText = count;
+}
+
+function save() {
+  console.log(count);
+  let contain = ` ${count} -`;
+  saveEl.innerText += contain;
+}
