@@ -96,16 +96,30 @@ console.log(greetingMe());
 
 // incrementing and decrementing
 
-let myPoints = 3
-function add3Points(){
-   myPoints += 3
-   console.log(myPoints);
-  }
-  
-  function remove1Points(){
-    myPoints--
-    console.log(myPoints);
+let myPoints = 3;
+function add3Points() {
+  myPoints += 3;
+  console.log(myPoints);
 }
 
-add3Points()
-remove1Points()
+function remove1Points() {
+  myPoints--;
+  console.log(myPoints);
+}
+
+add3Points();
+remove1Points();
+
+// strings and numbers
+
+function predict(a,b){
+  console.log(a+b); 
+}
+predict("2",2)
+predict(11,5)
+predict("6",5)
+predict("myPoints: 5",2)
+predict("2","13")
+
+
+

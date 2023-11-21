@@ -43,3 +43,69 @@ button:hover{
 #save-btn{
 background-color: darkgreen;
 }
+
+.container{
+    width: 300px;
+    margin: 10px auto;
+    padding: 10px;
+    border:1px solid #f2f2f2 ;
+    background-color: #fff;
+    color: #000;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 3px 10px 0px rgba(0,255,0.5);
+}
+
+.container img{
+    background-size: cover;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.container button{
+    background-color: darkgray;
+    font-size: 1.05rem ;
+    border: none;
+}
+.container button:hover{
+    background-color: gray;
+}
+@keyframes bigError {
+    0%{
+        transform: scale(0.5);
+    }
+    /* 50%{
+        transform: scale(1);
+    } */
+    100%{
+        transform: scale(5);
+    }
+
+}
+
+#error{
+    font-size: 0.3em;
+    display: none;
+    background-color: red;
+    margin: 10px auto;
+    padding: 10px;
+    width: 100px;
+    color: white;
+    border-radius: 10px;
+    animation: bigError 0.7s infinite ;
+}
+
+
+#num-el,#sum-el{
+display: inline-block;
+width: 100px;
+margin: 10px 2px;
+border: none ;
+border-bottom: 2px solid grey;
+outline: none;
+text-align: center;
+}
+
+
+
+
