@@ -68,7 +68,12 @@ console.log(messageToUser);
 
 let Myname = "ken";
 let greeting = "Hi,my name is";
+let greeting2 = "Welcome back";
 
 let myGreeting = `${greeting} ${Myname}`;
 
 console.log(myGreeting);
+
+let welcomeEl = document.getElementById("welcome-el");
+
+welcomeEl.innerText = `${greeting2} ${Myname} 👋`
