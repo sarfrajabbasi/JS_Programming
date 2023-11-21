@@ -12,8 +12,7 @@ function increment() {
 }
 
 function save() {
-  console.log(count);
-  let contain = ` ${count} -`;
+  let contain = `${count} -`;
   saveEl.textContent += contain;
   countEl.textContent = 0;
   count = 0
