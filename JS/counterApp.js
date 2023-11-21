@@ -23,9 +23,9 @@ console.log(count2);
 
 // dogAge:---
 
-let myAge = 23 ; 
+let myAge = 23;
 let dogHumanRatio = 7;
-let myDogAge = myAge * dogHumanRatio
+let myDogAge = myAge * dogHumanRatio;
 
 console.log(myDogAge);
 
@@ -34,29 +34,41 @@ console.log(myDogAge);
 // Reassigning & increment
 
 let bonusPoint = 50;
- bonusPoint = bonusPoint + 50;
- bonusPoint = bonusPoint + 45;
- bonusPoint = bonusPoint - 75;
- console.log(bonusPoint);
-
-
-
+bonusPoint = bonusPoint + 50;
+bonusPoint = bonusPoint + 45;
+bonusPoint = bonusPoint - 75;
+console.log(bonusPoint);
 
 let race = 5;
-function setRace(){
-    let raceElement = document.getElementById('race')
-    const time = setInterval(function(){
-        if(race !== 0){
-            raceElement.textContent =race
-            raceElement.style.color = 'red' 
-            console.log(race--);
-        }else{
-            console.log("GO!!!");
-            raceElement.textContent = "GO!!!"
-            raceElement.style.color = 'green' 
-            clearInterval(time)
-        }
-          
-    },1000)
-   
+function setRace() {
+  let raceElement = document.getElementById("race");
+  const time = setInterval(function () {
+    if (race !== 0) {
+      raceElement.textContent = race;
+      raceElement.style.color = "red";
+      console.log(race--);
+    } else {
+      console.log("GO!!!");
+      raceElement.textContent = "GO!!!";
+      raceElement.style.color = "green";
+      clearInterval(time);
+    }
+  }, 1000);
 }
+
+// dom
+// string
+
+let username = "happy";
+
+let message = "Your have three notificaions";
+let messageToUser = `${message} ${username} !`;
+
+console.log(messageToUser);
+
+let Myname = "ken";
+let greeting = "Hi,my name is";
+
+let myGreeting = `${greeting} ${Myname}`;
+
+console.log(myGreeting);
