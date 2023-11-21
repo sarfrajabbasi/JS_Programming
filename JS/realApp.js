@@ -7,11 +7,14 @@ let saveEl = document.getElementById("saveEl");
 // increment count
 function increment() {
   count++;
-  countEl.innerText = count;
+  countEl.textContent = count;
+  
 }
 
 function save() {
   console.log(count);
   let contain = ` ${count} -`;
-  saveEl.innerText += contain;
+  saveEl.textContent += contain;
+  countEl.textContent = 0;
+  count = 0
 }
