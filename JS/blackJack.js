@@ -121,7 +121,7 @@ for(let i=0;i<featurePosts.length;i++){
   console.log(featurePosts[i]);
 }
 
-let sentence = ["Hello","my","name","is","Perman"];
+let sentence = ["Hello","my","name","is","Perman","and ","am late"];
 
 let greetingEl = document.getElementById('greeting-el');
 
