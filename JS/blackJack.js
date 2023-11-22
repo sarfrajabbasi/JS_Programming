@@ -9,6 +9,7 @@ let firstCard = 12;
 let secondCard = 9;
 
 let sum = firstCard + secondCard;
+let cards = [firstCard ,secondCard];
 
 let hasBlackJack = false;
 // create var isalive and assign the value true and flip the value in aproprate code
@@ -22,9 +23,13 @@ const messageEl = document.getElementById("message-el");
 const cardEl = document.getElementById("card-el");
 const sumEl = document.getElementById("sum-el");
 
-function startGame() {
+function startGame(){
+  renderGame()
+}
+
+function renderGame() {
   sumEl.textContent = " Sum: " + sum;
-  cardEl.textContent = " Cards: " + firstCard +" | "+ secondCard ;
+  cardEl.textContent = " Cards: " + cards[0] +" | "+ cards[1] ;
   if (sum < 21) {
     message = "Do you want to draw a new card";
   } else if (sum === 21) {
@@ -47,7 +52,7 @@ function newCard(){
   let card = Number(prompt('enter value'));
   sum+=card
   console.log("Drawing a new card from the deck!");
-startGame()
+renderGame()
 }
 
 // check if the persion is old enough to enter the nightclub(21)
@@ -73,3 +78,10 @@ if (age <= 99) {
 } else {
   console.log("Not elegible,you have already gotten one");
 }
+
+
+let featurePosts = [
+  "Check out my netflix clone",
+  "Here's the code for my project",
+  "I've just relaunched my portfolio",
+]
