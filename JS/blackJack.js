@@ -4,9 +4,9 @@
 
 // var-sum and set value sum of the two cards
 
-let firstCard = 12;
+let firstCard = getRandomCard();
 
-let secondCard = 9;
+let secondCard = getRandomCard();
 
 let sum = firstCard + secondCard;
 let cards = [firstCard ,secondCard];
@@ -23,13 +23,30 @@ const messageEl = document.getElementById("message-el");
 const cardEl = document.getElementById("card-el");
 const sumEl = document.getElementById("sum-el");
 
+
+// create random number
+function getRandomCard(){
+  let cardsNum = []
+  for(let i=1;i<53;i++){
+    cardsNum.push(i);
+  }
+  let num = parseInt(Math.random()*cardsNum.length);
+  console.log(num);
+  return num
+}
+
 function startGame(){
   renderGame()
 }
 
 function renderGame() {
+  
+  cardEl.textContent = " Cards: " 
   sumEl.textContent = " Sum: " + sum;
-  cardEl.textContent = " Cards: " + cards[0] +" | "+ cards[1] ;
+  
+  for(let i=0;i<cards.length;i++){
+    cardEl.textContent += cards[i] + " "; 
+  }
   if (sum < 21) {
     message = "Do you want to draw a new card";
   } else if (sum === 21) {
@@ -49,9 +66,11 @@ function renderGame() {
   messageEl.textContent = message;
 }
 function newCard(){
-  let card = Number(prompt('enter value'));
-  sum+=card
+  let card = getRandomCard();
+  sum+=card;
   console.log("Drawing a new card from the deck!");
+  cards.push(card);
+
 renderGame()
 }
 
@@ -85,3 +104,29 @@ let featurePosts = [
   "Here's the code for my project",
   "I've just relaunched my portfolio",
 ]
+let persionMIT = ["sarfraj",23,true];
+
+
+// add remove item from arr
+
+persionMIT.push("JIET")
+persionMIT.push("remove me now")
+console.log(persionMIT);
+let remove = persionMIT.pop()
+console.log(persionMIT);
+
+console.log(remove);
+
+for(let i=0;i<featurePosts.length;i++){
+  console.log(featurePosts[i]);
+}
+
+let sentence = ["Hello","my","name","is","Perman"];
+
+let greetingEl = document.getElementById('greeting-el');
+
+// Render the sentence in the greetingel para using a for loop and textcontent
+
+for(let i=0;i<sentence.length;i++){
+  greetingEl.textContent += sentence[i] + " ";
+}
