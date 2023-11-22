@@ -24,6 +24,7 @@ h1{
 }
 
 button{
+    display: block;
     background-color: goldenrod;
     width: 200px;
     color: green;
@@ -34,6 +35,8 @@ button{
     border-radius:5px ;
     font-size: 1.2rem;
     font-weight: bold;
+    margin-top: 5px ;
+    margin-bottom: 5px ;
 }
 
 button:hover{

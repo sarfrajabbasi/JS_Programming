@@ -17,18 +17,21 @@ let isAlive = true;
 // add message var and assign ""; and reassign var to logging out
 let message = "";
 // display the message and store message-el elemnt in var messageEl
+// display the cards and store cards-el elemnt in var messageEl
 const messageEl = document.getElementById("message-el");
+const cardEl = document.getElementById("card-el");
 const sumEl = document.getElementById("sum-el");
 
 function startGame() {
   sumEl.textContent = " Sum: " + sum;
+  cardEl.textContent = " Cards: " + firstCard +" | "+ secondCard ;
   if (sum < 21) {
     message = "Do you want to draw a new card";
   } else if (sum === 21) {
     message = "wohoo! you've got blackjack!";
     hasBlackJack = true;
   } else if (sum > 21) {
-    message = "You 're of thr game";
+    message = "You 're out of the game";
     isAlive = false;
   }
 
@@ -39,6 +42,12 @@ function startGame() {
   // console.log(message);
 
   messageEl.textContent = message;
+}
+function newCard(){
+  let card = Number(prompt('enter value'));
+  sum+=card
+  console.log("Drawing a new card from the deck!");
+startGame()
 }
 
 // check if the persion is old enough to enter the nightclub(21)
