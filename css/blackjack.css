@@ -24,16 +24,19 @@ h1{
 }
 
 button{
-    background-color: rgb(5, 170, 5);
-    color: #fff;
+    background-color: goldenrod;
+    width: 200px;
+    color: green;
     font-weight: bold;
     border: none;
     padding: 10px  20px;
     box-shadow: 0 4px 10px 0 rgba(0,0,0,0.4);
-    border-radius:10px ;
+    border-radius:5px ;
+    font-size: 1.2rem;
+    font-weight: bold;
 }
 
 button:hover{
-    background-color: rgb(4, 110, 4);
-    border: 1px solid white;
+    background-color: gold;
+    border: 1px solid lightgreen;
 }

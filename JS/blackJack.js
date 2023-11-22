@@ -9,32 +9,37 @@ let firstCard = 12;
 let secondCard = 9;
 
 let sum = firstCard + secondCard;
+
 let hasBlackJack = false;
 // create var isalive and assign the value true and flip the value in aproprate code
 let isAlive = true;
 
 // add message var and assign ""; and reassign var to logging out
 let message = "";
+// display the message and store message-el elemnt in var messageEl
+const messageEl = document.getElementById("message-el");
+const sumEl = document.getElementById("sum-el");
 
+function startGame() {
+  sumEl.textContent = " Sum: " + sum;
+  if (sum < 21) {
+    message = "Do you want to draw a new card";
+  } else if (sum === 21) {
+    message = "wohoo! you've got blackjack!";
+    hasBlackJack = true;
+  } else if (sum > 21) {
+    message = "You 're of thr game";
+    isAlive = false;
+  }
 
-console.log(sum);
+  // Cash OUT!
 
-if (sum < 21) {
-  message = "Do you want to draw a new card";
-} else if (sum === 21) {
-  message = "wohoo! you've got blackjack!";
-  hasBlackJack = true
-} else if (sum > 21) {
-  message = "You 're of thr game";
-  isAlive = false
+  // console.log(hasBlackJack);
+  // console.log(isAlive);
+  // console.log(message);
+
+  messageEl.textContent = message;
 }
-
-// Cash OUT!
-
-console.log(hasBlackJack);
-console.log(isAlive);
-console.log(message);
-
 
 // check if the persion is old enough to enter the nightclub(21)
 
@@ -59,6 +64,3 @@ if (age <= 99) {
 } else {
   console.log("Not elegible,you have already gotten one");
 }
-
-
-
