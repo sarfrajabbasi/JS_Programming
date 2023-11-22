@@ -51,3 +51,8 @@ const multiple = ()=>{
   sum2.textContent =  "Sum: "+ eval(input.value)
   
 }
+
+
+
+
+
