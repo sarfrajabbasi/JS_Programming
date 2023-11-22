@@ -1,0 +1,39 @@
+body{
+    font-family:Verdana, Geneva, Tahoma, sans-serif ;
+    background:url('../img/blackjack.jpg');
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    font-size: 2rem;
+
+}
+
+body > *{
+    margin: 0 auto;
+    padding: 10px;
+}
+
+h1{
+    color: goldenrod;
+}
+
+#message-el{
+    font-style:italic ;
+
+}
+
+button{
+    background-color: rgb(5, 170, 5);
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    padding: 10px  20px;
+    box-shadow: 0 4px 10px 0 rgba(0,0,0,0.4);
+    border-radius:10px ;
+}
+
+button:hover{
+    background-color: rgb(4, 110, 4);
+    border: 1px solid white;
+}
