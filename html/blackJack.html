@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="../css/blackjack.css">
     <title>black-jack</title>
 </head>
-<body>
+<body id="body">
     <h1>Black-Jack</h1>
     <p id="message-el">Want to play a round?</p>
     <p id="card-el">Cards:</p>
@@ -15,7 +15,16 @@
     <button id="newCard" onclick="newCard()" >NEW CARD</button>
 
     <p id="player-el"></p>
+
+    <p id="apple-shelf"></p>
+    <p id="orange-shelf"></p>
 </body>
 <script src="../JS/blackJack.js"></script>
 <script src="../JS/practice.js"></script>
+<script>
+    const body = document.getElementById('body');
+   
+        body.style.background = "url('https://source.unsplash.com/random/?blackJack')";
+    
+</script>
 </html>

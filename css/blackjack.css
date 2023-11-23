@@ -1,6 +1,5 @@
 body{
     font-family:Verdana, Geneva, Tahoma, sans-serif ;
-    background:url('../img/blackjack.jpg');
     background-size: cover;
     color: #fff;
     text-align: center;
@@ -42,4 +41,18 @@ button{
 button:hover{
     background-color: gold;
     border: 1px solid lightgreen;
+}
+
+#apple-shelf,#orange-shelf{
+    margin: 10px auto;
+    padding: 10px;
+    width: 200px;
+    border-radius: 10px;
+}
+
+#apple-shelf{
+    background-color: rgb(243, 110, 110);
+}
+#orange-shelf{
+    background-color: rgb(247, 186, 74);
 }

@@ -111,3 +111,58 @@ let person = {
     console.log(`${person.name} is ${person.age} years old and lives in ${person.country}`);
   }
 }
+
+
+let myAge =67;
+
+if(myAge < 6){
+  console.log("free");
+}else if(myAge < 18){
+  console.log("child discount");
+}else if(myAge < 27){
+  console.log("student discount");
+}else if(myAge < 67){
+  console.log("full price");
+}else {
+  console.log("senior citizen discount");
+}
+
+let largeCountries = ["China",'India',"USA","Indonesia","Pakistan"];
+
+for(let i=0;i<largeCountries.length;i++){
+  
+  console.log("-" + largeCountries[i]);
+}
+
+let dayOfMonth = 13;
+let weekday = "Firday";
+
+if(dayOfMonth === 13 && weekday === "Firday"){
+  console.log("😱 🗡 ⛓ ⚰️");
+}
+
+let hands = ["Rock","Paper","Scissor"];
+
+function randomItem(){
+  return hands[Math.floor(Math.random()*hands.length)];
+}
+
+console.log(randomItem());
+console.log(randomItem());
+console.log(randomItem());
+
+let fruit = ["🍎","🟠","🍎","🟠","🍎","🟠","🍎","🍎","🍎","🍎","🟠"];
+
+let appleShelf = document.getElementById('apple-shelf');
+let orangeShelf = document.getElementById('orange-shelf');
+
+
+for(let i=0;i<fruit.length;i++){
+
+  if(fruit[i]=== "🍎"){
+    appleShelf.textContent +=fruit[i];
+  }else{
+    orangeShelf.textContent +=fruit[i];
+  }
+
+}
