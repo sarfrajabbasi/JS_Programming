@@ -57,6 +57,12 @@ for (let i = 0; i < sentence.length; i++) {
 let hasCompletedCourse = true;
 let givesCertificate = true;
 
+if(hasCompletedCourse){
+    if(generateCertificate){
+        generateCertificate()
+    }
+}
+
 function generateCertificate(){
     console.log("Genertaing Certificate...");
 }
