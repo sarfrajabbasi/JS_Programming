@@ -4,16 +4,12 @@
 
 // var-sum and set value sum of the two cards
 
-let firstCard = getRandomCard();
-
-let secondCard = getRandomCard();
-
-let sum = firstCard + secondCard;
-let cards = [firstCard, secondCard];
+let sum = 0;
+let cards = [];
 
 let hasBlackJack = false;
 // create var isalive and assign the value true and flip the value in aproprate code
-let isAlive = true;
+let isAlive = false;
 
 // add message var and assign ""; and reassign var to logging out
 let message = "";
@@ -25,19 +21,23 @@ const sumEl = document.getElementById("sum-el");
 
 // create random number
 function getRandomCard() {
-  let randomNum = Math.floor(Math.random()*13) +1;
+  let randomNum = Math.floor(Math.random() * 13) + 1;
 
-  if(randomNum === 1){
-    return 11
-  }else if(randomNum > 10){
-   
-    return 10
-
+  if (randomNum === 1) {
+    return 11;
+  } else if (randomNum > 10) {
+    return 10;
   }
   return randomNum;
 }
 
 function startGame() {
+  let firstCard = getRandomCard();
+  let secondCard = getRandomCard();
+  cards = [firstCard, secondCard];
+  sum = firstCard + secondCard;
+  isAlive = true;
+
   renderGame();
 }
 
