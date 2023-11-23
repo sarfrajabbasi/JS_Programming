@@ -57,13 +57,22 @@ for (let i = 0; i < sentence.length; i++) {
 let hasCompletedCourse = true;
 let givesCertificate = true;
 
-if(hasCompletedCourse){
-    if(generateCertificate){
-        generateCertificate()
-    }
+if(hasCompletedCourse && givesCertificate){
+    generateCertificate()
 }
 
 function generateCertificate(){
     console.log("Genertaing Certificate...");
+}
+
+let hasSolvedChallenge = false;
+let hasHintsLeft = false;
+
+if(!(hasSolvedChallenge && hasHintsLeft)){
+    showSolution()
+}
+
+function showSolution(){
+    console.log("Showing the solution...");
 }
 
