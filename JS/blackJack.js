@@ -7,6 +7,11 @@
 let sum = 0;
 let cards = [];
 
+let player = {
+  name:"sarfraj",
+  chips:145,
+}
+
 let hasBlackJack = false;
 // create var isalive and assign the value true and flip the value in aproprate code
 let isAlive = false;
@@ -16,8 +21,13 @@ let message = "";
 // display the message and store message-el elemnt in var messageEl
 // display the cards and store cards-el elemnt in var messageEl
 const messageEl = document.getElementById("message-el");
+
+const playerEl = document.getElementById('player-el');
+playerEl.textContent = player.name + " : $" + player.chips ;
+
 const cardEl = document.getElementById("card-el");
 const sumEl = document.getElementById("sum-el");
+
 
 // create random number
 function getRandomCard() {
@@ -68,11 +78,15 @@ function renderGame() {
   messageEl.textContent = message;
 }
 function newCard() {
-  let card = getRandomCard();
+
+  // Only allow the player to get new card if she is alive and does not hav blackjack;
+  if(isAlive === true && hasBlackJack === false){
+    let card = getRandomCard();
   sum += card;
-  // console.log("Drawing a new card from the deck!");
   cards.push(card);
 
   renderGame();
+  }
+  
 }
 

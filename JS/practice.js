@@ -45,12 +45,12 @@ for (let i = 0; i < featurePosts.length; i++) {
 
 let sentence = ["Hello", "my", "name", "is", "Perman", "and ", "am late"];
 
-let greetingEl = document.getElementById("greeting-el");
+// let greetingEl = document.getElementById("greeting-el");
 
 // Render the Sentence in the greetingel para using a for loop and textcontent
 
 for (let i = 0; i < sentence.length; i++) {
-  greetingEl.textContent += sentence[i] + " ";
+//   greetingEl.textContent += sentence[i] + " ";
 }
 
 
@@ -76,3 +76,17 @@ function showSolution(){
     console.log("Showing the solution...");
 }
 
+
+function recommandMovie(){
+    console.log('Blue Film with red eyes with the green 3D glass');
+}
+
+let course ={
+  title:"'Learn CSS Grid for free",
+  lessons:16,
+  creator:"Per Harald Borgen",
+  length:63,
+  level:2,
+  isFree:true,
+  tags:["html","css"]
+}
