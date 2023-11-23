@@ -90,3 +90,24 @@ let course ={
   isFree:true,
   tags:["html","css"]
 }
+
+let castle = {
+  title:'Live like a king in my castle',
+  price:190,
+  isSuperHost:true,
+  images:["img/castle1.png","img/castle2.png"]
+}
+
+console.log(castle.price);
+console.log(castle.isSuperHost);
+
+// Practice
+
+let person = {
+  name:"sarfraj",
+  age:24,
+  country:'India',
+  logData:()=>{
+    console.log(`${person.name} is ${person.age} years old and lives in ${person.country}`);
+  }
+}
