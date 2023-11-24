@@ -9,6 +9,7 @@
 let myLeads = [];
 const inputBtn = document.getElementById('input-btn');
 const inputEl = document.getElementById('input-el');
+const ulList = document.querySelector('#ul-list');
 
 // log out 'button clicked' when the user clicks the "SAVE INPUT" button
 
@@ -21,6 +22,9 @@ console.log(myLeads);
     
 });
 
-// render items/logout the items in the myLeads arr using a for loop
+// Render items/logout the items in the myLeads arr using a for loop and also render the leads in the unorder list using ul.textContent
 
+for(let i=0;i<myLeads.length;i++){
+    ulList.textContent += myLeads[i]
+}
 
