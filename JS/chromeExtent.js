@@ -17,14 +17,27 @@ const ulList = document.querySelector('#ul-list');
 inputBtn.addEventListener('click',()=>{
 // push the value www.asda.com to myArr when the inputbtn clicked.
 // push the value from input filed into myLeads arr.
-myLeads.push(inputEl.value)
-console.log(myLeads);
+    myLeads.push(inputEl.value);
     
-});
+    
+// clear the existing list
+ulList.innerHTML = ""
+    
 
 // Render items/logout the items in the myLeads arr using a for loop and also render the leads in the unorder list using ul.textContent
 
+// phloshopy: make it work and then correct it.
 for(let i=0;i<myLeads.length;i++){
-    ulList.textContent += myLeads[i]
+
+    // ulList.innerHTML += `<li>${myLeads[i]}</li>`
+    // create element
+    const li = document.createElement('li');
+    // set text content
+    li.textContent = myLeads[i];
+    // append to ul
+    ulList.appendChild(li)
 }
+inputEl.value = ""
+console.log(inputEl.value);
+});
 
