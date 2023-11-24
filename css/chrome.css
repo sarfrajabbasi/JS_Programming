@@ -26,3 +26,14 @@ box-shadow: 0 3px 6px rgba(0,0,0,0.4);
 button:hover{
     background:rgb(35, 85, 6) ;
 }
+
+.box1{
+   cursor: pointer;
+   background: lightseagreen;
+   padding:40px ;
+   width: 200px;
+   text-align: center;
+   margin: 20px auto;
+   color: white;
+   font-weight: bold;
+}
