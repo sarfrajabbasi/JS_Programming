@@ -76,6 +76,8 @@ function renderLeads() {
 // // localStorage.clear()
 
 
+// js singalize emtpyness (undefined)
+// devlop singalize emtpyness (null)
 let currViewer = null;
 currViewer = ["Jane","nick"];
 currViewer = null;
@@ -85,3 +87,6 @@ if(currViewer){
   console.log("no viewer watch");
 
 }
+currViewer = ["as"];
+
+console.log(currViewer[6]);
