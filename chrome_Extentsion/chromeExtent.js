@@ -16,7 +16,13 @@ const ulList = document.querySelector("#ul-list");
 // log out variable
 
 let leadsFromLocalStorage =JSON.parse(localStorage.getItem('myleads'));
-console.log(leadsFromLocalStorage);
+
+
+// check if leadsfrom localStore is truthy and if so,set myleads to its value and call renderLeads()
+if(leadsFromLocalStorage){
+  myLeads = leadsFromLocalStorage;
+  renderLeads()
+}
 
 // log out 'button clicked' when the user clicks the "SAVE INPUT" button
 
@@ -62,7 +68,6 @@ function renderLeads() {
 
   ulList.innerHTML = listItems;
 
-  console.log(inputEl.value);
 }
 
 
@@ -78,15 +83,20 @@ function renderLeads() {
 
 // js singalize emtpyness (undefined)
 // devlop singalize emtpyness (null)
-let currViewer = null;
-currViewer = ["Jane","nick"];
-currViewer = null;
-if(currViewer){
-  console.log("yes the watch you");
-}else{
-  console.log("no viewer watch");
+// let currViewer = null;
+// currViewer = ["Jane","nick"];
+// currViewer = null;
+// if(currViewer){
+//   console.log("yes the watch you");
+// }else{
+//   console.log("no viewer watch");
 
-}
-currViewer = ["as"];
+// }
+// currViewer = ["as"];
 
-console.log(currViewer[6]);
+// console.log(currViewer[6]);
+
+// // truthy and falsey value find?
+
+// let trueOfFalse = Boolean(-0);//f
+// console.log(trueOfFalse);
