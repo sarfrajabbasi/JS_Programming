@@ -8,6 +8,8 @@
 let myLeads = [];
 
 const inputBtn = document.getElementById("input-btn");
+const deleteBtn = document.getElementById('delete-btn');
+
 const inputEl = document.getElementById("input-el");
 const ulList = document.querySelector("#ul-list");
 
@@ -15,13 +17,13 @@ const ulList = document.querySelector("#ul-list");
 // store it in a variable leadsFromLocalStorage
 // log out variable
 
-let leadsFromLocalStorage =JSON.parse(localStorage.getItem('myleads'));
+const leadsFromLocalStorage =JSON.parse(localStorage.getItem('myleads'));
 
 
 // check if leadsfrom localStore is truthy and if so,set myleads to its value and call renderLeads()
 if(leadsFromLocalStorage){
   myLeads = leadsFromLocalStorage;
-  renderLeads()
+  render(myLeads)
 }
 
 // log out 'button clicked' when the user clicks the "SAVE INPUT" button
@@ -37,13 +39,22 @@ inputBtn.addEventListener("click", () => {
 
   // save the myLeads array to localStorage
   localStorage.setItem('myleads',JSON.stringify(myLeads))
-  renderLeads(); 
+  render(myLeads); 
 
 });
 
+// Listen for double clicks on the delete-btn  and clear localstorage,myleads and DOM
+
+deleteBtn.addEventListener('dblclick',()=>{
+  localStorage.clear();
+  // ulList.innerHTML = ""
+  myLeads =[];
+  render(myLeads)
+})
+
 // wrap the code in functions:-------
 
-function renderLeads() {
+function render(leads) {
   // clear the existing list
   // ulList.innerHTML = ""
 
@@ -54,13 +65,13 @@ function renderLeads() {
   // Improving the performance of our app/and render current items*
 
   let listItems = "";
-  for (let i = 0; i < myLeads.length; i++) {
+  for (let i = 0; i < leads.length; i++) {
     // wrap the lead in an anchor tag <a> inside the <li>
 
     listItems += `
     <li>
-    <a target="_blank" href="${myLeads[i]}">
-    ${myLeads[i]}
+    <a target="_blank" href="${leads[i]}">
+    ${leads[i]}
     </a>
     </li>`;
   }
