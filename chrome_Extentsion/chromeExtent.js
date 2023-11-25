@@ -52,3 +52,5 @@ function renderLeads() {
 
   console.log(inputEl.value);
 }
+
+// pracitce
