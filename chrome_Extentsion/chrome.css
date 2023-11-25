@@ -62,3 +62,10 @@ color: #5f9341;
   background-color: #5f9341;
   color: white;
 }
+#tab-btn{
+  background-color: rgb(54, 54, 202);
+}
+
+#tab-btn:hover{
+  background-color: rgb(23, 23, 114);
+}
